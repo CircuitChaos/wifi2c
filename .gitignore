@@ -1,0 +1,6 @@
+/cli/wifi2c-cli
+/cli/*.o
+/lib/libwifi2c.a
+/lib/libwifi2c.so
+/lib/*.o
+/.clang-format
