@@ -62,7 +62,7 @@ LED off – firmware is trying to connect to the network.
 
 LED blinks erratically – firmware is connected to the network and IP address has been obtained.
 
-This erratic blinking is actually slow Morse code, with which the board is constantly communicating its IP address. Speed is set to 5 WPM to allow people who don't know Morse code to count slower and faster blinks and use some online decoders to decode them, or the below table. Between each cycle a <BT> prosign is transmitted (`-...-`).
+This erratic blinking is actually slow Morse code, with which the board is constantly communicating its IP address. Speed is set to 5 WPM to allow people who don't know Morse code to count slower and faster blinks and use some online decoders to decode them, or the below table. Between each cycle a &lt;BT&gt; prosign is transmitted (`-...-`).
 
 For your reference:
 
@@ -79,7 +79,7 @@ For your reference:
 | 8    | ---..  |
 | 9    | ----.  |
 | .    | .-.-.- |
-| <BT> | -...-  |
+| &lt;BT&gt; | -...-  |
 
 For example, if your board has the IP 192.168.2.72, you'll see in Morse:
 
@@ -173,25 +173,25 @@ Here are the commands:
 
 Used to keep the TCP/IP link open / check if it's still open.
 
-Command: k
-Response: k
+* Command: k
+* Response: k
 
 ### Clock selection
 
 Clock is just a delay after each port state change, in 10 µs units. Example to set clock to 0xa3 (so 163 × 10 µs = 1.63 ms):
 
-Command: ca3
-Response: ca3
+* Command: ca3
+* Response: ca3
 
 Note that hex number has to be lowercase. Another example to set the fastest clock:
 
-Command: c01
-Response: c01
+* Command: c01
+* Response: c01
 
 And slowest:
 
-Command: cff
-Response: cff
+* Command: cff
+* Response: cff
 
 You can also use c00 to disable delay, but it's not guaranteed to work reliably.
 
@@ -199,22 +199,22 @@ You can also use c00 to disable delay, but it's not guaranteed to work reliably.
 
 Resets the bus (tries to clock out of the unknown bus state). It's good to execute this at the beginning.
 
-Command: e
-Response: e
+* Command: e
+* Response: e
 
 ### Start
 
 Sends start or repeated start.
 
-Command: s
-Response: s
+* Command: s
+* Response: s
 
 ### Stop
 
 Sends stop.
 
-Command: p
-Response: p
+* Command: p
+* Response: p
 
 ### Write
 
@@ -222,13 +222,13 @@ Writes a byte to the slave and receives ACK or NAK.
 
 Example to write the byte 0xbf and receive ACK:
 
-Command: wbf
-Response: wbfa
+* Command: wbf
+* Response: wbfa
 
 Another example – write 0x01, receive NAK:
 
-Command: w01
-Response: w01n
+* Command: w01
+* Response: w01n
 
 ### Read
 
@@ -236,13 +236,13 @@ Reads a byte from the slave and sends ACK or NAK.
 
 Example to read byte 0xbf and send ACK:
 
-Command: ra
-Response: rabf
+* Command: ra
+* Response: rabf
 
 Another example – read 0x01, send NAK:
 
-Command: rn
-Response: rn01
+* Command: rn
+* Response: rn01
 
 ## Contact
 
