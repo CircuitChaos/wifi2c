@@ -111,7 +111,7 @@ If you already configured the network, you can press ENTER in five seconds after
 
 ## Connecting the board
 
-Here's the tricky part – firmware reuses RX (IO3) and TX (IO0) lines as I2C lines. RX (IO3) is SCL and TX (IO0) is SDA.
+Here's the tricky part – firmware reuses RX (IO3) and TX (IO1) lines as I2C lines. RX (IO3) is SCL and TX (IO1) is SDA.
 
 Why not the other way around? It's because ESP8266 writes some diagnostic information to the serial port when it starts. From the I2C point of view, it's just flipping the SDA line while SCL is high due to a pull-up, so it's harmless.
 
